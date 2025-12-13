@@ -1,0 +1,487 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --purple: #5722CD;
+    --blue: #4845E4;
+    --pink: #ED4385;
+    --black: #0C0C0C;
+    --lightpurple: #F2F0FF;
+    --lightgrey: #F3F6F9;
+    --grey: #7A7A7A;
+    --white: #FFFFFF;
+}
+
+/*////////////////////////
+    Table of Contents
+    1. Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*2*/
+/*. Typography*/
+
+body {
+    font-family: Merriweather, Roboto;
+}
+
+h1 {
+    color: var(--white);
+    font-size: 30px;
+    padding: 30px 0;
+}
+
+h2 {
+    color: var(--purple);
+    font-size: 18px;
+}
+
+h3 {
+    color: var(--white);
+    font-size: 14px;
+    font-weight: lighter;
+}
+
+h4 {
+    color: var(--black);
+    font-size: 24px;
+}
+
+h5 {
+    color: var(--purple);
+    padding-bottom: 10px;
+    font-size: 16px;
+}
+
+p {
+    font-size: 14px;
+}
+
+::placeholder {
+    color: var(--grey);
+}
+
+li > a {
+    text-decoration: none;
+    color: var(--white);
+}
+
+.h2-text {
+    padding: 80px 50px 50px 50px;
+    position: relative;
+}
+
+
+.h2-text::after {
+    content: "hello";
+    text-align: center;
+    font-size: 250px;
+    font-weight: bolder;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: -1;
+    color: #F2F0FF;
+}
+
+
+/*3*/
+/*. Layout*/
+
+.center-box {
+    display: flex;
+    flex-direction: column;
+    padding: 50px 220px 20px 220px;
+    text-align: center;
+    align-items: center;
+}
+
+.section-one {
+    position: relative;
+}
+
+.section-one::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-top: 30px solid var(--purple);
+    border-left: 100vw solid transparent;
+    border-right: 20px solid transparent;
+}
+
+.header-images {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 320px;
+}
+
+.work {
+    display: flex;
+    flex-direction: column;
+    padding: 300px 0 100px 0;
+    position: relative;
+    background-color: var(--lightgrey);
+}
+
+.work::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-top: 30px solid var(--white);
+    border-left: 100vw solid transparent;
+    border-right: 20px solid transparent;
+}
+
+.work::after {
+    content: "work";
+    font-size: 400px;
+    font-weight: bolder;
+    position: absolute;
+    left: 0;
+    top: 0;
+    text-align: center;
+    width: 100%;
+    z-index: 1;
+    color: white;
+}
+
+.projects {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: var(--lightgrey);
+}
+
+.projects-reversed {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.project-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 40px;
+    margin: 0 40px;
+    flex-shrink: 0;
+    flex-basis: 300px;
+    z-index: 2;
+    position: relative;
+}
+
+.project-text::after {
+    content: "";
+    background-image: url('/Assets/squiggle_line.svg');
+    background-size: contain;
+    position: absolute;
+    left: 0;
+    top: 25%;
+    height: 10px;
+    width: 90px;
+}
+
+.work-image {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    margin-left: auto;
+    z-index: 2;
+}
+
+.work-image-reversed {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: auto;
+}
+
+.services {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 180px 0;
+    position: relative;
+    margin: 0 100px;
+}
+
+.services::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-top: 20px solid var(--lightgrey);
+    border-left: 100vw solid transparent;
+    border-right: 30px solid transparent;
+}
+
+.services::after {
+    content: "services";
+    font-size: 200px;
+    font-weight: bolder;
+    position: absolute;
+    left: 0;
+    text-align: center;
+    top: 0;
+    width: 100%;
+    z-index: -1;
+    color: #F3F6F9;
+}
+
+.article {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 300px;
+    box-shadow: 0 5px 10px darkgrey;
+    background-color: var(--white);
+}
+
+.article-image {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 20px 100px 10px 10px;
+}
+
+.article-text {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 20px 30px 10px;
+}
+
+.question-form {
+    color: var(--white);
+}
+
+.link-to-project {
+    text-decoration: none;
+    font-size: 12px;
+    color: var(--purple);
+    position: relative;
+
+}
+
+.link-to-project::after {
+    content: "";
+    position: absolute;
+    left: 6.5em;
+    bottom: 0.5em;
+    width: 20px;
+    height: 2px;
+    background-color: var(--purple);
+    transition: width 0.3s ease;
+}
+
+.link-to-project:hover::after {
+    width: 70px;
+}
+
+/*3.1*/
+/*Reusables*/
+
+button {
+    color: var(--white);
+    background-color: var(--pink);
+    border-radius: 20px;
+    box-shadow: 0 5px 6px rgba(0, 0, 0, 0.2);
+}
+
+.send-button {
+    margin-top: 10px;
+    padding: 10px 40px;
+}
+
+.work-button {
+    margin-top: 10px;
+    padding: 10px 20px;
+}
+
+.squiggle-header {
+    max-width: 30px;
+    padding-top: 50px;
+}
+
+.squiggle-work {
+    max-width: 40px;
+}
+
+img {
+    width: 100%;
+}
+
+.form-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 20px;
+}
+
+label {
+    font-size: 12px;
+    color: var(--white);
+}
+
+input {
+    margin-bottom: 12px;
+    padding-right: 300px;
+}
+
+#message {
+    padding-bottom: 100px;
+}
+
+/*3.2*/
+/*Other*/
+
+
+/*4.1*/
+/*Header*/
+
+header {
+    background: linear-gradient(to right, var(--blue), var(--purple));
+    position: relative;
+}
+
+
+nav {
+    width: 100%;
+}
+
+ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    padding: 20px 20px;
+    gap: 40px;
+}
+
+li {
+    list-style: none;
+    color: var(--white);
+}
+
+/*4.2*/
+/*Main*/
+
+section {
+    position: relative;
+}
+
+.form-section {
+    background: linear-gradient(to right, var(--blue), var(--purple));
+}
+
+.have-a-question {
+    margin: 30px 0;
+    font-size: 12px;
+}
+
+/*4.3*/
+/*Footer*/
+
+footer {
+    background-color: var(--black);
+    padding: 10px 0;
+    text-align: center;
+}
+
+.footer-text {
+    color: var(--white);
+    font-weight: lighter;
+    font-size: 10px;
+}
+
+/*5*/
+/*. Media Queries */
+
+/* Standaard voor mobiel */
+
+@media only screen and (min-width: 576px) and (max-width: 768px) {
+    .center-box {
+        padding: 20px 10px;
+        margin: 0 20px;
+    }
+
+    .projects {
+        flex-direction: column-reverse;
+        align-items: flex-start;
+    }
+
+    .projects-reversed {
+        flex-direction: column-reverse;
+    }
+
+    .project-text {
+        flex-basis: 100px;
+        margin: 0 20px;
+    }
+
+    .work {
+        padding: 150px 0 30px 0;
+    }
+
+    .work::after {
+        font-size: 250px;
+    }
+
+    .work-image {
+        margin: 50px 20px 20px 20px;
+    }
+
+    .work-image-reversed {
+        margin: 50px 20px 20px 20px;
+    }
+
+    .services {
+        flex-direction: column;
+        padding: 80px 0 10px 0;
+        margin: 0;
+    }
+
+    .services::after {
+        font-size: 100px;
+    }
+
+    .article {
+        margin: 10px 100px;
+        flex-basis: 300px;
+    }
+
+    .article-image {
+        max-width: 100px;
+    }
+
+    .header-images {
+        padding: 0 20px;
+    }
+
+    h3 {
+        font-size: 18px;
+    }
+
+
+    ul {
+        justify-content: space-around;
+    }
+
+}
